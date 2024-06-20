@@ -1,4 +1,4 @@
 Learning Solidity
 
 Sources: </br> 
-— [Patrick Collins' Solidity course](https://youtu.be/umepbfKp5rI)
+— [Patrick Collins's Solidity course](https://youtu.be/umepbfKp5rI)
