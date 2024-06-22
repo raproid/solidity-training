@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.19; // state solidity version
+pragma solidity ^0.8.19; // state solidity version
 
 // a simple smart contract
 contract SimpleStorage {
@@ -29,7 +29,7 @@ contract SimpleStorage {
     // Person public myFriend = Person({favouriteNumber: 0, name: "test"});
 
    // access and modify the myFavouriteNumber state var
-    function store(uint256 _favouriteNumber) public {
+    function store(uint256 _favouriteNumber) public virtual {
         myFavouriteNumber = _favouriteNumber;
     }
 
