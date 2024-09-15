@@ -61,7 +61,7 @@ contract FundMe {
     }
 
     modifier onlyOwner() {
-       // require() eats up too much gas; optimizing gas costs with revert(); not sure if implemented it correctly, as it's still passed a string down below and revert doesn't have a func syntax there;
+       // require() eats up too much gas; optimizing gas costs with revert(); not sure if implemented it correctly, as it's still passed a string down below and revert doesn't have a func syntax there
        // require(msg.sender == i_owner, "Sender is not owner");
 
        if (msg.sender != i_owner) {
@@ -69,4 +69,14 @@ contract FundMe {
        }
         _;
     }
+
+    // If somebody sends ETH to this contract without calling fund(), redirect them to fund()
+
+    receive() external payable {
+        fund();
+    }
+
+    fallback() external payable {
+        fund();
+     }
 }
